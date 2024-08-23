@@ -1,6 +1,6 @@
 import sys
 
-# from buttons import ButtonsGrid
+from buttons import Button, ButtonsGrid
 from display import Display
 from info import Info
 from main_window import MainWindow
@@ -26,16 +26,20 @@ if __name__ == '__main__':
     
     #Info
     info = Info('2.0 ^ 10.0 = 1024')
-    window.addToVLayout(info)
+    window.addWidgetToVLayout(info)
     
     # Display
     display = Display()
-    window.addToVLayout(display)
+    window.addWidgetToVLayout(display)
     
-    
+
     # Grid
-    # buttonsGrid = ButtonsGrid(display, info, window)
-    # window.vLayout.addLayout(buttonsGrid)
+    buttonsGrid = ButtonsGrid()
+    window.vLayout.addLayout(buttonsGrid)
+   
+    # Button
+    # button1 = Button('Texto do botão')
+    # buttonsGrid.addWidget(button1)
 
     # Executa tudo
     window.adjustFixedSize()
