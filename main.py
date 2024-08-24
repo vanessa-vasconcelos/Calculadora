@@ -24,9 +24,6 @@ if __name__ == '__main__':
     info = Info('Sua conta')
     window.addWidgetToVLayout(info)
     
-    #Info
-    info = Info('2.0 ^ 10.0 = 1024')
-    window.addWidgetToVLayout(info)
     
     # Display
     display = Display()
@@ -34,7 +31,7 @@ if __name__ == '__main__':
     
 
     # Grid
-    buttonsGrid = ButtonsGrid()
+    buttonsGrid = ButtonsGrid(display, info, window)
     window.vLayout.addLayout(buttonsGrid)
    
     # Button
